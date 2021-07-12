@@ -10,6 +10,7 @@
 <h3>Clientes cadastrados</h3>
     <table class="table" colspan="3">
     <thead>
+        <td>ID</td>
         <td>Nome</td>
         <td>Telefone</td>
         <td>Email</td>
@@ -19,6 +20,7 @@
     </thead>
     {% for dados in clientes %}
     <tr>
+        <td>{{dados.id}}</td>
         <td>{{dados.nome}}</td>
         <td>{{dados.telefone}}</td>
         <td>{{dados.email}}</td>

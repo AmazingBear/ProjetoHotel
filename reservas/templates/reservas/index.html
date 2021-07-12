@@ -10,6 +10,7 @@
 <h3>Reservas cadastradas</h3>
     <table class="table" colspan="3">
     <thead>
+        <td>ID</td>
         <td>CPF</td>
         <td>Quarto</td>
         <td>Telefone</td>
@@ -19,6 +20,7 @@
     </thead>
     {% for dados in reservas %}
     <tr>
+        <td>{{dados.id}}</td>
         <td>{{dados.cpf}}</td>
         <td>{{dados.quarto}}</td>
         <td>{{dados.telefone}}</td>
