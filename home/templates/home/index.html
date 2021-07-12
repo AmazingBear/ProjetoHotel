@@ -1,0 +1,22 @@
+{%extends 'base.html'%}
+
+{%block 'titulo'%} Home da página {%endblock%}
+
+{%block 'conteudo'%}
+
+<section>
+    <div style="background-color: #666561">
+        <h1 class="jumbotron">Hotel Primavera</h1>
+        <h2>"O nosso compromisso é com o seu conforto!"</h2>
+        <p>Site feito para que a gerência do hotel possa cadastrar clientes e gerenciar reservas feitas pelos mesmos.</p>
+        <a class="btn btn-dark" href="{% url 'cliente' %}">Clientes</a>
+        <a class="btn btn-warning" href="{% url 'reservas' %}">Reservas</a>
+    </div>
+    <div style="background-color: grey">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h1>Aqui vai vir uma imagem</h1>
+        <h2>E cards também, porém não consegui colocar por enquanto</h2>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+</section>
+{%endblock%}

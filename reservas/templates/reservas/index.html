@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block 'titulo'%}Lista Reservas{%endblock%}
+
+{%block 'conteudo'%}
+<div style="background-color:grey">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+<a class="btn btn-success" href="{% url 'formulariosreserva' %}">Cadastrar</a>
+<h3>Reservas cadastradas</h3>
+    <table class="table" colspan="3">
+    <thead>
+        <td>CPF</td>
+        <td>Quarto</td>
+        <td>Telefone</td>
+        <td>Pessoas</td>
+        <td></td>
+        <td></td>
+    </thead>
+    {% for dados in reservas %}
+    <tr>
+        <td>{{dados.cpf}}</td>
+        <td>{{dados.quarto}}</td>
+        <td>{{dados.telefone}}</td>
+        <td>{{dados.pessoas}}</td>
+        <td><a href="#"class="btn btn-primary">Editar</a></td>
+        <td><a href="#"class="btn btn-danger">Excluir</a></td>
+    </tr>
+    {%endfor%}
+
+    </table>
+</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+{%endblock%}

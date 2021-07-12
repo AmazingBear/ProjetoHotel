@@ -1,0 +1,35 @@
+{%extends 'base.html'%}
+
+{%block 'titulo'%}Lista clientes{%endblock%}
+
+{%block 'conteudo'%}
+<div style="background-color:grey">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="container">
+<a class="btn btn-success" href="{% url 'formularios' %}">Cadastrar</a>
+<h3>Clientes cadastrados</h3>
+    <table class="table" colspan="3">
+    <thead>
+        <td>Nome</td>
+        <td>Telefone</td>
+        <td>Email</td>
+        <td>CPF</td>
+        <td></td>
+        <td></td>
+    </thead>
+    {% for dados in clientes %}
+    <tr>
+        <td>{{dados.nome}}</td>
+        <td>{{dados.telefone}}</td>
+        <td>{{dados.email}}</td>
+        <td>{{dados.cpf}}</td>
+        <td><a href="#"class="btn btn-primary">Editar</a></td>
+        <td><a href="#"class="btn btn-danger">Excluir</a></td>
+    </tr>
+    {%endfor%}
+
+    </table>
+</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+{%endblock%}
