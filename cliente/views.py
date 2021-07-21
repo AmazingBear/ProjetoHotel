@@ -26,3 +26,9 @@ def insere_cliente(request):
         c.commit()
     return render(request, 'cliente/form_cliente.html')
 
+def deleta_cliente(request, id):
+    with c.cursor() as deletar:
+        sql = 'DELETE FROM tbcliente WHERE id = %s'
+        deletar.execute(sql, id)
+        c.commit()
+    return render(request, 'cliente/index.html')

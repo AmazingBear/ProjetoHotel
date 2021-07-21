@@ -26,3 +26,11 @@ def insere_reserva(request):
         c.commit()
     return render(request, 'reservas/form_reservas.html')
 
+def deleta_reserva(request, id):
+    with c.cursor() as deletar:
+        sql = 'DELETE FROM tbreserva WHERE id = %s'
+        deletar.execute(sql, id)
+        c.commit()
+    return render(request, 'reservas/index.html')
+
+
